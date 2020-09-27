@@ -1,0 +1,73 @@
+
+
+<section>
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="login-box ">
+                    <div class="signup-form">
+                        <h2>Register</h2>
+                       
+                        <form (ngSubmit)="f.form.valid && submit()" #f="ngForm">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label> Name</label>
+                                        <input type="text" placeholder="Name"class="form-control" name="name" required [(ngModel)]="form.name" #name="ngModel"   [ngClass]="{ 'is-invalid': (!name.untouched && name.invalid) || (f.submitted && name.invalid)}">
+                                        <label class="text-danger" *ngIf="(!f.submitted && !name.untouched && name.invalid) || (f.submitted && name.invalid)">Name is requred.</label>
+                                    </div>
+                                   
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label> Age</label>
+                                        <input type="number" placeholder="age" min="0" class="form-control" name="age" required [(ngModel)]="form.age" #age="ngModel"  [ngClass]="{ 'is-invalid': (!age.untouched && age.invalid) || (f.submitted && age.invalid)}">
+                                        <label class="text-danger" *ngIf="(!f.submitted && !age.untouched && age.invalid) || (f.submitted && age.invalid)">Age is requred.</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label> Profession</label>
+                                        <input type="text" placeholder="Profession" class="form-control" name="Profession" required [(ngModel)]="form.Profession" #Profession="ngModel"  [ngClass]="{ 'is-invalid': (!Profession.untouched && Profession.invalid) || (f.submitted && Profession.invalid)}">
+                                        <label class="text-danger" *ngIf="(!f.submitted && !Profession.untouched && Profession.invalid) || (f.submitted && Profession.invalid)"> Profession is requred.</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label> contact</label>
+                                        <input type="text" placeholder="contact" max="10" min="0" class="form-control" name="contact" required [(ngModel)]="form.contact" #contact="ngModel"  [ngClass]="{ 'is-invalid': (!contact.untouched && contact.invalid) || (f.submitted && contact.invalid)}">
+                                        <label class="text-danger" *ngIf="(!f.submitted && !contact.untouched && contact.invalid) || (f.submitted && contact.invalid)"> contact is requred.</label>
+                                    
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label> Email</label>
+                                        <input type="text" placeholder="Email" class="form-control" name="email" required [(ngModel)]="form.email" #email="ngModel"  [ngClass]="{ 'is-invalid': (!email.untouched && email.invalid) || (f.submitted && email.invalid)}">
+                                        <label class="text-danger"  *ngIf="(!f.submitted && !email.untouched && email.invalid) || (f.submitted && email.invalid) "> email is requred.</label>
+                                    </div>
+                                </div>
+
+                              </div>
+                          <button  class="btn-sub" type="submit"  > Register</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+   
+</section>

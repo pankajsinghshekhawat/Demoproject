@@ -1,0 +1,10 @@
+.text-center {
+          background: cadetblue;
+          height: 63px;
+      }
+      h5.card-header {
+          background: cadetblue;
+      }
+      .form-group.col-5 {
+          margin-left: 73px;
+      }
